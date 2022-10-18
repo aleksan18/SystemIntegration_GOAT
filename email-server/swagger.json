@@ -1,0 +1,94 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "version": "1.0.0",
+      "title": "My User Project CRUD",
+      "description": "My User Project Application API",
+      "license": {
+        "name": "MIT",
+        "url": "https://opensource.org/licenses/MIT"
+      }
+    },
+    "host": "localhost:8080",
+    "basePath": "/",
+    "tags": [
+      {
+        "name": "Data format translation Node ",
+        "description": "API for users in the system"
+      }
+    ],
+    "schemes": ["http"],
+    "consumes": ["application/json"],
+    "produces": ["application/json"],
+    "paths": {
+          "/jsonRoute":{
+            "get": {
+              "tags": ["Birds data translation"],
+              "summary": "Reads the json file birds.json and parses it back as json",
+              "responses": {
+                "200": {
+                  "description": "OK",
+                  "schema": {
+                    "$ref": "#/definitions/birds"
+                  }
+                }
+              }
+            }
+          },
+          "/txtRoute": {
+            "get": {
+              "tags": ["Birds data translation"],
+              "summary": "Reads the txt file birds.txt and parses it back as json",
+              "responses": {
+                "200": {
+                  "description": "OK",
+                  "schema": {
+                    "$ref": "#/definitions/birds"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "definitions": {
+          "birds": {
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "The name of the bird",
+                "value":"Freckles"
+              },
+              "species": {
+                "type": "string",
+                "description": "The species of the bird",
+                "value":"Sparrow"
+              },
+              "wingspan":{
+                "type": "string",
+                "description": "The wingspan of the bird",
+                "value":"13 centimetres "
+              },
+              "age":{"type":"string",
+                "description":"The age of the bird",
+              "value":"7 months"},
+              "color":{"type":"string",
+                "description":"The color of the bird",
+              "value":"brown"},
+              "location":{"type":"string",
+                "description":"The location of the bird",
+              "value":"Southern Europe"},
+              "weight":{"type":"integer",
+                "description":"The weight of the bird in kg",
+              "value":0.020}
+
+
+  
+          },
+          
+          "Birds": {
+            "type": "array",
+            "$ref": "#/definitions/birds"
+          }
+        }
+      }
+}

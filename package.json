@@ -1,0 +1,29 @@
+{
+  "name": "systemintegration_email_server",
+  "version": "1.0.0",
+  "description": "Invite sending + email service",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "set NODE_ENV=development && cd email-server && nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aleksan18/SystemIntegration_GOAT.git"
+  },
+  "dependencies": {
+    "@mailchimp/mailchimp_transactional": "^1.0.48",
+    "dotenv": "^16.0.3",
+    "express": "4.18.2",
+    "express-validator": "6.14.2",
+    "neo4j-driver": "5.1.0",
+    "nodemailer": "6.8.0",
+    "swagger-ui-express": "^4.5.0"
+  },
+  "author": "Aleksandar Minchev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aleksan18/SystemIntegration_GOAT/issues"
+  },
+  "homepage": "https://github.com/aleksan18/SystemIntegration_GOAT#readme"
+}
